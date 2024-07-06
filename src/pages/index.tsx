@@ -13,7 +13,7 @@ const Home: React.FC = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Discover Project Lotus, a relaxing platform designed for studying with the Pomodoro Method. Enhance your focus and productivity with soothing backgrounds and a built-in 25-minute timer. Perfect for students and professionals looking to optimize their study sessions. Visit us now!" />
                 <title>Project Lotus</title>
-                <link rel="icon" type="image/x-icon" href="../../public/icon.ico"></link>
+                <link rel="icon" href="/icon.ico"></link>
             </Head>
 
             <BackgroundVideo />
