@@ -7,6 +7,7 @@ module.exports = {
             jsx: true,
         },
     },
+    parser: '@typescript-eslint/parser',
     settings: {
         react: {
             version: 'detect',
@@ -22,6 +23,7 @@ module.exports = {
         'next',
         'next/core-web-vitals',
     ],
+    plugins: ['@typescript-eslint'],
     rules: {
         // Custom rules can be added here
     },
