@@ -115,3 +115,24 @@
         padding-top: 0.5rem;
     }
 }
+
+
+
+@media screen and (min-height: 579px) {
+
+    html,
+    body {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-height: 578px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        min-height: 100vh;
+    }
+}

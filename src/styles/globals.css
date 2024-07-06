@@ -24,8 +24,6 @@
 html,
 body {
     margin: 0;
-    overflow: hidden;
-    height: 100vh;
 }
 
 body {
@@ -48,16 +46,17 @@ body {
 }
 
 header {
-    height: 10%;
+    height: 5rem;
+    margin-bottom: 1rem
 }
 
 main {
-    height: 85%;
     @apply text-3xl;
 }
 
 footer {
-    height: 5%;
+    height: 2rem;
+    margin-top: 1rem;
 }
 
 .timer {
