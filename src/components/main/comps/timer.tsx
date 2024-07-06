@@ -20,7 +20,7 @@ const Timer = () => {
             clearInterval(intervalRef.current);
         }
         return () => clearInterval(intervalRef.current!);
-    }, [state]);
+    }, [state,]);
 
     const updateSec = () => {
         setSeconds((prevSeconds) => {
