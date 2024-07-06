@@ -1,0 +1,117 @@
+@media screen and (min-width: 1025px) {
+    .header-parts {
+        @apply w-64;
+    }
+
+    iframe {
+        height: 152;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .timer {
+        font-size: 2.5rem;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    iframe {
+        @apply h-min w-min;
+    }
+
+    .music-div {
+        @apply flex justify-center;
+    }
+}
+
+@media screen and (min-width: 867px) {
+    .big-dev {
+        display: none;
+    }
+
+    .header-parts {
+        @apply w-44;
+    }
+}
+
+@media screen and (max-width: 866px) {
+    .header-parts {
+        @apply w-44;
+    }
+
+    .btns {
+        @apply h-9;
+    }
+
+    .rd-btns {
+        @apply w-9;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .click-div {
+        font-size: 1.5rem;
+    }
+
+    .big-dev {
+        display: flex;
+    }
+
+    .x-small-dev {
+        display: none;
+    }
+
+    .rd-btns {
+        @apply w-10 h-10;
+    }
+}
+
+@media screen and (max-width: 706px) {
+    .header-parts {
+        @apply w-24;
+    }
+
+    .header-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .ctner:hover .lightmode {
+        @apply rounded-tr-none rounded-br-none border-none scale-95;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+    }
+
+    .ctner:hover .darkmode {
+        @apply rounded-tl-none rounded-bl-none border-none scale-95;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .ctner:hover .lightmode {
+        @apply rounded-br-none rounded-bl-none border-none scale-95;
+    }
+
+    .ctner:hover .darkmode {
+        @apply rounded-tr-none rounded-tl-none border-none scale-95;
+    }
+
+    .change-flex {
+        flex-direction: column;
+    }
+
+    .big-dev {
+        display: flex;
+    }
+
+    .header-parts {
+        @apply w-16;
+    }
+
+    body {
+        padding-top: 0.5rem;
+    }
+}
