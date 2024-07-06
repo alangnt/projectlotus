@@ -90,7 +90,7 @@
     }
 }
 
-@media screen and (max-width: 524px) {
+@media screen and (max-width: 546px) {
     .ctner:hover .lightmode {
         @apply rounded-br-none rounded-bl-none border-none scale-95;
     }
@@ -113,6 +113,18 @@
 
     body {
         padding-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 483px) {
+    header {
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    header {
+        height: 7rem;
     }
 }
 
