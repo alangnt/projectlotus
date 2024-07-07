@@ -4,6 +4,8 @@ import Header from '../components/header/headerHome';
 import Main from '../components/main/mainHome';
 import Footer from '../components/footer/footerHome';
 import React from "react";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Home: React.FC = () => {
     return (
@@ -23,6 +25,9 @@ const Home: React.FC = () => {
             <Main />
 
             <Footer />
+
+            <Analytics />
+            <SpeedInsights />
         </div>
     )
 };
