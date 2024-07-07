@@ -15,6 +15,8 @@ const Home: React.FC = () => {
                 <meta name="description" content="Discover Project Lotus, a relaxing platform designed for studying with the Pomodoro Method. Enhance your focus and productivity with soothing backgrounds and a built-in 25-minute timer. Perfect for students and professionals looking to optimize their study sessions. Visit us now!" />
                 <title>Project Lotus</title>
                 <link rel="icon" href="/icon.ico"></link>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8441329308595760"
+                    crossOrigin="anonymous"></script>
             </Head>
 
             <BackgroundVideo />
