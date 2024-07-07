@@ -1,6 +1,4 @@
-import { withNextSitemap } from 'next-sitemap';
-
-module.exports = withNextSitemap({
+module.exports = {
     async headers() {
         return [
             {
@@ -14,4 +12,4 @@ module.exports = withNextSitemap({
             },
         ];
     },
-});
+};
