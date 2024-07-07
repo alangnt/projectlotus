@@ -4,8 +4,6 @@ import Header from '../components/header/headerHome';
 import Main from '../components/main/mainHome';
 import Footer from '../components/footer/footerHome';
 import React from "react";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Home: React.FC = () => {
     return (
@@ -13,6 +11,7 @@ const Home: React.FC = () => {
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="google-site-verification" content="JNRzwjtOEUwxtu9LWSm1sdHseLr5Jg-FMLKA6LZbphI" />
                 <meta name="description" content="Discover Project Lotus, a relaxing platform designed for studying with the Pomodoro Method. Enhance your focus and productivity with soothing backgrounds and a built-in 25-minute timer. Perfect for students and professionals looking to optimize their study sessions. Visit us now!" />
                 <title>Project Lotus</title>
                 <link rel="icon" href="/icon.ico"></link>
@@ -25,9 +24,6 @@ const Home: React.FC = () => {
             <Main />
 
             <Footer />
-
-            <Analytics />
-            <SpeedInsights />
         </div>
     )
 };
