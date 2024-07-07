@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media screen and (min-width: 1025px) {
     .header-parts {
         @apply w-64;
@@ -78,7 +82,7 @@
     }
 }
 
-@media screen and (min-width: 525px) {
+@media screen and (min-width: 547px) {
     .ctner:hover .lightmode {
         @apply rounded-tr-none rounded-br-none border-none scale-95;
         box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
@@ -114,6 +118,10 @@
     body {
         padding-top: 0.5rem;
     }
+
+    footer {
+        @apply mb-2
+    }
 }
 
 @media screen and (min-width: 483px) {
@@ -128,9 +136,21 @@
     }
 }
 
+@media screen and (min-width: 413px) {
+    .footer-size {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .footer-size {
+        font-size: 0.8rem;
+    }
+}
 
 
-@media screen and (min-height: 579px) {
+
+@media screen and (min-height: 668px) {
 
     html,
     body {
@@ -139,12 +159,12 @@
     }
 }
 
-@media screen and (max-height: 578px) {
+@media screen and (max-height: 667px) {
 
     html,
     body {
         overflow-x: hidden;
-        overflow-y: scroll;
-        min-height: 100vh;
+        height: 100vh;
+        @apply mb-2 mt-2;
     }
 }
