@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://projectlotus.online
+
+# Sitemaps
+Sitemap: https://projectlotus.online/sitemap.xml
