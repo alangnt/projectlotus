@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useStatus } from '../../../context/context';
+import { useStatus } from '../../context/context';
+import Link from 'next/link';
 
 interface FormData {
     email: string;
@@ -28,18 +29,18 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <div className='w-full h-full'>
+        <main className='flex flex-col justify-between text-center grow gap-4'>
             {submitted ? (
                 <div className='flex justify-center'>
                     <p className='text-3xl'>Welcome back !</p>
                 </div>
             ) : (
-                <div className='w-full h-full flex justify-center'>
+                <div className='w-full h-full flex flex-col items-center gap-4'>
                     {status ? (
-                        <div className='form-light w-5/6 h-4/5 flex flex-col items-center justify-between pt-6 rounded-3xl'>
-                            <h1 className='text-3xl'>Welcome back ! Login to your account</h1>
-                            <form onSubmit={handleSubmit} className='flex flex-col justify-evenly grow text-xl w-80'>
-                                <div className='flex flex-col'>
+                        <div className='form-light w-5/6 flex flex-col items-center justify-between pt-6 pr-6 pl-6 rounded-3xl login-height'>
+                            <h1 className='text-3xl text-center'>Welcome back ! Login to your account</h1>
+                            <form onSubmit={handleSubmit} className='flex flex-col justify-center gap-12 grow text-2xl form-width'>
+                                <div className='flex flex-col gap-2'>
                                     <label htmlFor="email">Email:</label>
                                     <input
                                         type="email"
@@ -48,11 +49,11 @@ const LoginForm: React.FC = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className='rounded-full h-8 text-sm p-2 text-black'
+                                        className='form-text rounded-full text-sm text-black'
                                     />
                                 </div>
 
-                                <div className='flex flex-col'>
+                                <div className='flex flex-col gap-2'>
                                     <label htmlFor="password">Password:</label>
                                     <input
                                         type="password"
@@ -61,17 +62,17 @@ const LoginForm: React.FC = () => {
                                         value={formData.password}
                                         onChange={handleChange}
                                         required
-                                        className='rounded-full h-8 text-sm p-2 text-black'
+                                        className='form-text rounded-full text-sm text-black'
                                     />
                                 </div>
                                 <button type="submit" className='hover:scale-110 transition-all'>Login</button>
                             </form>
                         </div>
                     ) : (
-                        <div className='form-dark w-5/6 h-4/5 flex flex-col items-center justify-between pt-6 rounded-3xl'>
-                            <h1 className="text-3xl">Welcome back ! Login to your account</h1>
-                            <form onSubmit={handleSubmit} className='flex flex-col justify-evenly grow text-xl w-80'>
-                                <div className='flex flex-col'>
+                        <div className='form-dark w-5/6 flex flex-col items-center justify-between pt-6 pr-6 pl-6 rounded-3xl login-height'>
+                            <h1 className="text-3xl text-center">Welcome back ! Login to your account</h1>
+                            <form onSubmit={handleSubmit} className='flex flex-col justify-center gap-12 grow text-2xl form-width'>
+                                <div className='flex flex-col gap-2'>
                                     <label htmlFor="email">Email:</label>
                                     <input
                                         type="email"
@@ -80,11 +81,11 @@ const LoginForm: React.FC = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className='rounded-full h-8 text-sm p-2 text-black'
+                                        className='form-text rounded-full text-sm text-black'
                                     />
                                 </div>
 
-                                <div className='flex flex-col'>
+                                <div className='flex flex-col gap-2'>
                                     <label htmlFor="password">Password:</label>
                                     <input
                                         type="password"
@@ -93,16 +94,17 @@ const LoginForm: React.FC = () => {
                                         value={formData.password}
                                         onChange={handleChange}
                                         required
-                                        className='rounded-full h-8 text-sm p-2 text-black'
+                                        className='form-text rounded-full text-sm text-black'
                                     />
                                 </div>
-                                <button type="submit" className='hover:scale-110 transition-all'>Register</button>
+                                <button type="submit" className='hover:scale-110 transition-all'>Login</button>
                             </form>
                         </div>
                     )}
+                    <Link href="/register" className='text-xl text-center underline'>First time here ? Create an account here</Link>
                 </div>
             )}
-        </div>
+        </main>
     );
 };
 

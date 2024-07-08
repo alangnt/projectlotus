@@ -1,4 +1,4 @@
-import LDModes from "./comps/ldModes";
+import LDModes from "./comps/ldModesHome";
 import UserInterface from "./comps/userInterface";
 
 export default function HeaderHome() {

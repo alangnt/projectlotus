@@ -113,3 +113,13 @@ footer {
 .usr-text-color {
     text-shadow: rgba(0, 0, 0, 0.3) 2px 2px;
 }
+
+.ctner:hover .lightmode {
+    @apply rounded-tr-none rounded-br-none border-none scale-95;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+}
+
+.ctner:hover .darkmode {
+    @apply rounded-tl-none rounded-bl-none border-none scale-95;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+}

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import BackgroundVideo from '../components/BackgroundVideo';
 import HeaderConnect from "../components/header/headerConnect";
-import RegisterForm from "../components/main/comps/registerForm";
+import RegisterForm from "../components/main/registerForm";
 import Footer from '../components/footer/footer';
 
 const Connect: React.FC = () => {

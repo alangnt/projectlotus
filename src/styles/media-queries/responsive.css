@@ -83,23 +83,29 @@
 }
 
 @media screen and (min-width: 547px) {
-    .ctner:hover .lightmode {
-        @apply rounded-tr-none rounded-br-none border-none scale-95;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+    .change-flex:hover .lightmode {
+        @apply rounded-br-none rounded-tr-none border-none scale-95;
     }
 
-    .ctner:hover .darkmode {
-        @apply rounded-tl-none rounded-bl-none border-none scale-95;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+    .change-flex:hover .darkmode {
+        @apply rounded-bl-none rounded-tl-none border-none scale-95;
+    }
+
+    .form-text {
+        @apply p-3;
+    }
+
+    .form-width {
+        @apply w-80;
     }
 }
 
 @media screen and (max-width: 546px) {
-    .ctner:hover .lightmode {
+    .change-flex:hover .lightmode {
         @apply rounded-br-none rounded-bl-none border-none scale-95;
     }
 
-    .ctner:hover .darkmode {
+    .change-flex:hover .darkmode {
         @apply rounded-tr-none rounded-tl-none border-none scale-95;
     }
 
@@ -121,6 +127,14 @@
 
     footer {
         @apply mb-2
+    }
+
+    .form-text {
+        @apply p-2
+    }
+
+    .form-width {
+        @apply w-3/4;
     }
 }
 
@@ -150,7 +164,31 @@
 
 
 
-@media screen and (min-height: 668px) {
+@media screen and (min-height:968px) {
+    .register-height {
+        @apply h-5/6;
+    }
+}
+
+@media screen and (max-height:967px) {
+    .register-height {
+        height: 40rem;
+    }
+}
+
+@media screen and (min-height:733px) {
+    .login-height {
+        @apply h-3/5;
+    }
+}
+
+@media screen and (max-height:732px) {
+    .login-height {
+        height: 30rem;
+    }
+}
+
+@media screen and (min-height: 822px) {
 
     html,
     body {
@@ -159,7 +197,7 @@
     }
 }
 
-@media screen and (max-height: 667px) {
+@media screen and (max-height: 821px) {
 
     html,
     body {
