@@ -1,7 +1,7 @@
 import LDModes from "./comps/ldModes";
 import UserInterface from "./comps/userInterface";
 
-export default function Header() {
+export default function HeaderHome() {
     return (
         <header className="flex justify-between items-center w-full h-2/10">
             <div className="header-parts">
