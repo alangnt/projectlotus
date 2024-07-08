@@ -98,7 +98,7 @@ footer {
 }
 
 .background-video {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 100%;
