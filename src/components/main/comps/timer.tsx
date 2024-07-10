@@ -3,8 +3,8 @@ import { useStatus } from "../../../context/context";
 
 const Timer = () => {
     const { status } = useStatus();
-    const [minutes, setMinutes] = useState<number>(25);
-    const [seconds, setSeconds] = useState<number>(0);
+    const [minutes, setMinutes] = useState<number>(0);
+    const [seconds, setSeconds] = useState<number>(5);
     const [state, setState] = useState<boolean>(true);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const bell = useRef<HTMLAudioElement | null>(null);
