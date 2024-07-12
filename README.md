@@ -15,3 +15,8 @@ Welcome to Project Lotus, a serene and efficient platform designed to elevate yo
 
 # Join Our Community
 Become part of the Project Lotus community and transform your study habits today. Visit us now at https://alangnt.github.io/project-lotus/ and start your journey towards more productive and focused study sessions.
+
+# Links to the Datasets
+https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo
+https://www.kaggle.com/code/hamdallak/125-years-of-summer-olympics-analysis-visual
+https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
