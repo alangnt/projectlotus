@@ -20,7 +20,7 @@ const Timer = () => {
             clearInterval(intervalRef.current);
         }
         return () => clearInterval(intervalRef.current!);
-    }, [state,]);
+    }, [state]);
 
     const updateSec = () => {
         setSeconds((prevSeconds) => {
@@ -40,17 +40,16 @@ const Timer = () => {
     };
 
     const appTimer = () => {
-        if (state) {
-            setState(false);
-        } else {
-            setState(true);
-        }
+        setState((prevState) => !prevState);
     };
 
     const resetAndRestartTimer = () => {
         setMinutes(25);
         setSeconds(0);
-        setState(true);
+        setState(true); // This stops the timer
+        setTimeout(() => {
+            setState(false); // This restarts the timer
+        }, 100); // Ensure the timer restarts
     };
 
     return (
@@ -62,16 +61,13 @@ const Timer = () => {
                     <span>{seconds.toString().padStart(2, '0')}</span>
                 </h2>
             ) : (
-                < h2 onClick={appTimer} className="timer timer-darkmode text-6xl w-72 h-72 rounded-full flex justify-center items-center cursor-pointer">
+                <h2 onClick={appTimer} className="timer timer-darkmode text-6xl w-72 h-72 rounded-full flex justify-center items-center cursor-pointer">
                     <span>{minutes.toString().padStart(2, '0')}</span>:
                     <span>{seconds.toString().padStart(2, '0')}</span>
                 </h2>
-            )
-            }
-        </div >
-
+            )}
+        </div>
     );
 };
 
 export default Timer;
-
