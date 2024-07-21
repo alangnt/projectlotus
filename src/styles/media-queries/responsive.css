@@ -3,206 +3,222 @@
 @tailwind utilities;
 
 @media screen and (min-width: 1025px) {
-    .header-parts {
-        @apply w-64;
-    }
+  .header-parts {
+    @apply w-64;
+  }
 
-    iframe {
-        height: 152;
-    }
+  iframe {
+    height: 152;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .timer {
-        font-size: 2.5rem;
-        width: 15rem;
-        height: 15rem;
-    }
+  .timer {
+    font-size: 2.5rem;
+    width: 15rem;
+    height: 15rem;
+  }
 
-    iframe {
-        @apply h-min w-min;
-    }
+  iframe {
+    @apply h-min w-min;
+  }
 
-    .music-div {
-        @apply flex justify-center;
-    }
+  .music-div {
+    @apply flex justify-center;
+  }
 }
 
 @media screen and (min-width: 867px) {
-    .big-dev {
-        display: none;
-    }
+  .big-dev {
+    display: none;
+  }
 
-    .header-parts {
-        @apply w-44;
-    }
+  .header-parts {
+    @apply w-44;
+  }
+
+  .big-mobile {
+    @apply w-1/5;
+  }
+
+  .small {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 866px) {
-    .header-parts {
-        @apply w-44;
-    }
+  .big {
+    display: none;
+  }
 
-    .btns {
-        @apply h-9;
-    }
+  .hide-mobile {
+    display: none;
+  }
 
-    .rd-btns {
-        @apply w-9;
-    }
+  .big-mobile {
+    @apply w-2/5 mb-2;
+  }
 
-    .header-title {
-        font-size: 3rem;
-    }
+  .header-parts {
+    @apply w-44;
+  }
 
-    .click-div {
-        font-size: 1.5rem;
-    }
+  .btns {
+    @apply h-9;
+  }
 
-    .big-dev {
-        display: flex;
-    }
+  .rd-btns {
+    @apply w-9;
+  }
 
-    .x-small-dev {
-        display: none;
-    }
+  .header-title {
+    font-size: 3rem;
+  }
 
-    .rd-btns {
-        @apply w-10 h-10;
-    }
+  .click-div {
+    font-size: 1.5rem;
+  }
+
+  .big-dev {
+    display: flex;
+  }
+
+  .x-small-dev {
+    display: none;
+  }
+
+  .rd-btns {
+    @apply w-10 h-10;
+  }
 }
 
 @media screen and (max-width: 706px) {
-    .header-parts {
-        @apply w-24;
-    }
+  .header-parts {
+    @apply w-24;
+  }
 
-    .header-title {
-        font-size: 3.5rem;
-    }
+  .header-title {
+    font-size: 3.5rem;
+  }
 }
 
 @media screen and (min-width: 547px) {
-    .change-flex:hover .lightmode {
-        @apply rounded-br-none rounded-tr-none border-none scale-95;
-    }
+  .change-flex:hover .lightmode {
+    @apply rounded-br-none rounded-tr-none border-none scale-95;
+  }
 
-    .change-flex:hover .darkmode {
-        @apply rounded-bl-none rounded-tl-none border-none scale-95;
-    }
+  .change-flex:hover .darkmode {
+    @apply rounded-bl-none rounded-tl-none border-none scale-95;
+  }
 
-    .form-text {
-        @apply p-3;
-    }
+  .form-text {
+    @apply p-3;
+  }
 
-    .form-width {
-        @apply w-80;
-    }
+  .form-width {
+    @apply w-80;
+  }
 }
 
 @media screen and (max-width: 546px) {
-    .change-flex:hover .lightmode {
-        @apply rounded-br-none rounded-bl-none border-none scale-95;
-    }
+  .change-flex:hover .lightmode {
+    @apply rounded-br-none rounded-bl-none border-none scale-95;
+  }
 
-    .change-flex:hover .darkmode {
-        @apply rounded-tr-none rounded-tl-none border-none scale-95;
-    }
+  .change-flex:hover .darkmode {
+    @apply rounded-tr-none rounded-tl-none border-none scale-95;
+  }
 
-    .change-flex {
-        flex-direction: column;
-    }
+  .change-flex {
+    flex-direction: column;
+  }
 
-    .big-dev {
-        display: flex;
-    }
+  .big-dev {
+    display: flex;
+  }
 
-    .header-parts {
-        @apply w-16;
-    }
+  .header-parts {
+    @apply w-16;
+  }
 
-    body {
-        padding-top: 0.5rem;
-    }
+  body {
+    padding-top: 0.5rem;
+  }
 
-    footer {
-        @apply mb-2
-    }
+  footer {
+    @apply mb-2;
+  }
 
-    .form-text {
-        @apply p-2
-    }
+  .form-text {
+    @apply p-2;
+  }
 
-    .form-width {
-        @apply w-3/4;
-    }
+  .form-width {
+    @apply w-3/4;
+  }
 }
 
 @media screen and (min-width: 483px) {
-    header {
-        height: 5rem;
-    }
+  header {
+    height: 5rem;
+  }
 }
 
 @media screen and (max-width: 482px) {
-    header {
-        height: 7rem;
-    }
+  header {
+    height: 7rem;
+  }
 }
 
 @media screen and (min-width: 413px) {
-    .footer-size {
-        font-size: 1rem;
-    }
+  .footer-size {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 412px) {
-    .footer-size {
-        font-size: 0.8rem;
-    }
+  .footer-size {
+    font-size: 0.8rem;
+  }
 }
 
-
-
-@media screen and (min-height:968px) {
-    .register-height {
-        @apply h-5/6;
-    }
+@media screen and (min-height: 968px) {
+  .register-height {
+    @apply h-5/6;
+  }
 }
 
-@media screen and (max-height:967px) {
-    .register-height {
-        height: 40rem;
-    }
+@media screen and (max-height: 967px) {
+  .register-height {
+    height: 40rem;
+  }
 }
 
-@media screen and (min-height:733px) {
-    .login-height {
-        @apply h-3/5;
-    }
+@media screen and (min-height: 733px) {
+  .login-height {
+    @apply h-3/5;
+  }
 }
 
-@media screen and (max-height:732px) {
-    .login-height {
-        height: 30rem;
-    }
+@media screen and (max-height: 732px) {
+  .login-height {
+    height: 30rem;
+  }
 }
 
 @media screen and (min-height: 822px) {
-
-    html,
-    body {
-        overflow: hidden;
-        height: 100vh;
-    }
+  html,
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 @media screen and (max-height: 821px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-        height: 100vh;
-        @apply mb-2 mt-2;
-    }
+  html,
+  body {
+    overflow-x: hidden;
+    height: 100vh;
+    @apply mb-2 mt-2;
+  }
 }

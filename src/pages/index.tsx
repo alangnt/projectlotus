@@ -1,3 +1,5 @@
+"use client";
+
 import BackgroundVideo from '../components/BackgroundVideo';
 import Head from 'next/head';
 import HeaderHome from '../components/header/headerHome';

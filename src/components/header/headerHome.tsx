@@ -12,7 +12,7 @@ export default function HeaderHome() {
                 <h1 className="text-6xl header-title">Project Lotus</h1>
             </div>
 
-            <div className="opacity-0 pointer-events-none header-parts flex justify-end">
+            <div className="header-parts h-full flex justify-end">
                 <UserInterface />
             </div>
         </header>

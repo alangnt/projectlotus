@@ -1,52 +1,68 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
+
 import React from 'react';
 import { useStatus } from "../../../context/context";
 
-const UserInterface: React.FC = () => {
-    const { status, setStatus } = useStatus();
+import { signIn, signOut, useSession } from "next-auth/react";
 
-    const handleStatusChange = () => {
-        setStatus((prevStatus: boolean) => !prevStatus);
-    };
+const UserInterface: React.FC = () => {
+    const { status } = useStatus();
+
+    const { data: session } = useSession();
 
     return (
-        <nav className="flex w-min">
-            {status ? (
-                <div className="flex">
-                    <section className="flex gap-2 h-10">
-                        <button className="btns border-white border-2 rounded-full pr-4 pl-4 btn-color-light h-full usr-text-color x-small-dev">Register</button>
-                        <button className="btns border-white border-2 rounded-full pr-4 pl-4 btn-color-light h-full usr-text-color x-small-dev">Login</button>
-                    </section>
+        <nav className="flex">
 
-                    <section className="hidden btns rd-btns justify-center items-center border-white border-2 rounded-full w-10 h-10 p-2 btn-color-light">
-                        <Link href="" className="relative w-full h-full"><Image fill src="/img/login.png" objectFit="contain" alt="login button" /></Link>
-                    </section>
+            {session ? (
+                <div className='flex flex-col items-center pt-4 pr-2'>
+                    <img src={session.user?.image as string} alt={session.user?.name as string} className='rounded-full big-mobile'></img>
 
-                    <section className="btns rd-btns justify-center items-center border-white border-2 rounded-full w-10 h-10 p-2 btn-color-light big-dev">
-                        <button className="relative w-full h-full"><Image fill src="/img/menu.png" objectFit="contain" alt="menu button"></Image></button>
-                        <Link href=""></Link>
-                        <Link href=""></Link>
-                    </section>
+                    <p className='hide-mobile'>
+                        Enjoy your session, {session.user?.name}!
+                    </p>
+
+                    <button
+                        onClick={() => signOut({ callbackUrl: '/' })}
+                        className='hover:scale-110'
+                    >
+                        Sign Out
+                    </button>
                 </div>
             ) : (
-                <div className="flex">
-                    <section className="flex gap-2 h-10">
-                        <button className="btns border-white border-2 rounded-full pr-4 pl-4 btn-color-dark h-full usr-text-color x-small-dev">Register</button>
-                        <button className="btns border-white border-2 rounded-full pr-4 pl-4 btn-color-dark h-full usr-text-color x-small-dev">Login</button>
-                    </section>
+                <div className='flex items-center'>
+                    {status ? (
+                        <>
+                            <button
+                                onClick={() => signIn("google")}
+                            >
+                                <img src='/img/logos/ggsignin.png' alt='Google Sign In button' className='big'></img>
+                            </button>
 
-                    <section className="hidden btns rd-btns justify-center items-center border-white border-2 rounded-full w-10 h-10 p-2 btn-color-dark">
-                        <Link href="" className="relative w-full h-full"><Image fill src="/img/login.png" objectFit="contain" alt="login button" /></Link>
-                    </section>
+                            <button
+                                onClick={() => signIn("google")}
+                            >
+                                <img src='/img/logos/ggsigninicon.png' alt='Google Sign In button' className='small'></img>
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <button
+                                onClick={() => signIn("google")}
+                            >
+                                <img src='/img/logos/ggsignin.png' alt='Google Sign In button' className='big'></img>
 
-                    <section className="btns rd-btns justify-center items-center border-white border-2 rounded-full w-10 h-10 p-2 btn-color-dark big-dev">
-                        <button className="relative w-full h-full"><Image fill src="/img/menu.png" objectFit="contain" alt="menu button"></Image></button>
-                        <Link href=""></Link>
-                        <Link href=""></Link>
-                    </section>
+                            </button>
+
+                            <button
+                                onClick={() => signIn("google")}
+                            >
+                                <img src='/img/logos/ggsigninicon.png' alt='Google Sign In button' className='small'></img>
+                            </button>
+                        </>
+                    )}
                 </div>
             )}
+
         </nav>
     );
 }

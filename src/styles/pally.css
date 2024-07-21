@@ -11,11 +11,11 @@
 *
 */
 @font-face {
-    font-family: 'Pally-Regular';
-    src: url('../../public/fonts/Pally-Regular.woff2') format('woff2'),
-        url('../../public/fonts/Pally-Regular.woff') format('woff'),
-        url('../../public/fonts/Pally-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
+  font-family: "Pally-Regular";
+  src: url("../../public/fonts/Pally-Regular.woff2") format("woff2"),
+    url("../../public/fonts/Pally-Regular.woff") format("woff"),
+    url("../../public/fonts/Pally-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
