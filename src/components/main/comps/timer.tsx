@@ -3,9 +3,8 @@ import { useStatus } from "../../../context/context";
 
 const Timer = () => {
     const { status } = useStatus();
-    const [minutes, setMinutes] = useState<number>(25);
-    const [seconds, setSeconds] = useState<number>(0);
-    const [state, setState] = useState<boolean>(true);
+    const [timeLeft, setTimeLeft] = useState<number>(25 * 60); // total time in seconds
+    const [isRunning, setIsRunning] = useState<boolean>(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const bell = useRef<HTMLAudioElement | null>(null);
 
@@ -14,58 +13,43 @@ const Timer = () => {
     }, []);
 
     useEffect(() => {
-        if (!state) {
-            intervalRef.current = setInterval(updateSec, 1000);
+        if (isRunning) {
+            intervalRef.current = setInterval(() => {
+                setTimeLeft((prevTimeLeft) => {
+                    if (prevTimeLeft <= 0) {
+                        bell.current?.play();
+                        clearInterval(intervalRef.current!);
+                        setTimeLeft(25 * 60); // Reset to 25 minutes
+                        setIsRunning(false); // Stop the timer
+                        return 25 * 60; // Reset time
+                    } else {
+                        return prevTimeLeft - 1;
+                    }
+                });
+            }, 1000);
         } else if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
         return () => clearInterval(intervalRef.current!);
-    }, [state]);
+    }, [isRunning]);
 
-    const updateSec = () => {
-        setSeconds((prevSeconds) => {
-            if (prevSeconds === 0) {
-                if (minutes === 0) {
-                    bell.current?.play();
-                    resetAndRestartTimer();
-                    return 0;
-                } else {
-                    setMinutes((prevMinutes) => prevMinutes - 1);
-                    return 59;
-                }
-            } else {
-                return prevSeconds - 1;
-            }
-        });
+    const toggleTimer = () => {
+        setIsRunning((prevIsRunning) => !prevIsRunning);
     };
 
-    const appTimer = () => {
-        setState((prevState) => !prevState);
-    };
-
-    const resetAndRestartTimer = () => {
-        setMinutes(25);
-        setSeconds(0);
-        setState(true); // This stops the timer
-        setTimeout(() => {
-            setState(false); // This restarts the timer
-        }, 100); // Ensure the timer restarts
-    };
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
 
     return (
         <div className="flex flex-col justify-center items-center grow gap-4 click-div">
-            {state ? 'Click to start Focusing' : 'Click to take a break earlier'}
-            {status ? (
-                <h2 onClick={appTimer} className="timer timer-lightmode text-6xl w-72 h-72 rounded-full flex justify-center items-center cursor-pointer">
-                    <span>{minutes.toString().padStart(2, '0')}</span>:
-                    <span>{seconds.toString().padStart(2, '0')}</span>
-                </h2>
-            ) : (
-                <h2 onClick={appTimer} className="timer timer-darkmode text-6xl w-72 h-72 rounded-full flex justify-center items-center cursor-pointer">
-                    <span>{minutes.toString().padStart(2, '0')}</span>:
-                    <span>{seconds.toString().padStart(2, '0')}</span>
-                </h2>
-            )}
+            {isRunning ? 'Click to take a break earlier' : 'Click to start Focusing'}
+            <h2
+                onClick={toggleTimer}
+                className={`timer ${status ? 'timer-lightmode' : 'timer-darkmode'} text-6xl w-72 h-72 rounded-full flex justify-center items-center cursor-pointer`}
+            >
+                <span>{String(minutes).padStart(2, '0')}</span>:
+                <span>{String(seconds).padStart(2, '0')}</span>
+            </h2>
         </div>
     );
 };
