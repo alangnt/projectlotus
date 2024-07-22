@@ -5,8 +5,6 @@ import { useStatus } from "../../../context/context";
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
-import Link from 'next/link';
-
 const UserInterface: React.FC = () => {
     const { status } = useStatus();
 
@@ -17,9 +15,7 @@ const UserInterface: React.FC = () => {
 
             {session ? (
                 <div className='flex flex-col items-center pt-4 pr-2'>
-                    <Link href='/profile' className=' big-mobile'>
-                        <img src={session.user?.image as string} alt={session.user?.name as string} className='rounded-full'></img>
-                    </Link>
+                    <img src={session.user?.image as string} alt={session.user?.name as string} className='rounded-full big-mobile'></img>
 
                     <p className='hide-mobile'>
                         Enjoy your session, {session.user?.name}!
