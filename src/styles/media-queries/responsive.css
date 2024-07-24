@@ -70,7 +70,7 @@
   }
 
   .big-mobile {
-    @apply w-2/5 mb-2;
+    @apply w-1/5 mb-2;
   }
 
   .header-parts {

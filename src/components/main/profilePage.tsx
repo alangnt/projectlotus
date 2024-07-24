@@ -69,9 +69,9 @@ const ProfilePage: React.FC = () => {
                                         <Image
                                             src={session.user?.image || '/img/login.png'}
                                             alt={session.user?.name || ''}
-                                            width={150}
-                                            height={150}
-                                            className='rounded-full big-mobile' />
+                                            width={75}
+                                            height={75}
+                                            className='rounded-full' />
                                     </div>
 
                                     <div className='flex gap-8 w-full'>
