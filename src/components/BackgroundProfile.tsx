@@ -6,8 +6,8 @@ const BackgroundProfile: React.FC = () => {
 
     return (
         <div className={`form-${status ? 'light' : 'dark'} video-container`}>
-
-        </div>
+            
+        </div >
     );
 };
 

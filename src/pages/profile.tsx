@@ -15,8 +15,8 @@ export default function Profile() {
     const { status } = useStatus();
 
     return (
-        <div className='text-white flex flex-col w-screen h-screen'>
-            < BackgroundVideo />
+        <div className='text-white flex flex-col w-full h-screen'>
+            <BackgroundVideo />
 
             <BackgroundProfile />
 

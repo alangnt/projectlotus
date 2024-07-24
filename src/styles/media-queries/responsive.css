@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@media screen and (min-width: 1137px) {
+  .profile-div {
+    font-size: 1.2vw;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  .profile-div {
+    font-size: 2vw;
+    width: 60vw;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .header-parts {
     @apply w-64;
@@ -123,6 +137,10 @@
   .register-height {
     width: 30vw;
   }
+
+  .profile-div {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 546px) {
@@ -165,6 +183,12 @@
 
   .register-height {
     width: 60vw;
+  }
+
+  .profile-div {
+    width: 90vw;
+    padding: 1rem;
+    font-size: 4vw;
   }
 }
 

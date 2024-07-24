@@ -55,17 +55,17 @@ const ProfilePage: React.FC = () => {
             {session ? (
                 <>
                     <div className='w-full h-full flex flex-col items-center gap-4'>
-                        <div className='flex flex-col items-center justify-between pt-6 pr-6 pl-6 gap-16'>
+                        <div className='flex flex-col h-full items-center justify-between pt-6 pr-6 pl-6 gap-8'>
                             <h1 className='text-3xl text-center'>Welcome to your Account, {session.user?.name || 'User'} !</h1>
 
-                            <section className={`timer-${status ? 'lightmode' : 'darkmode'} border-2 flex flex-col justify-between register-height p-8 form-width`}>
+                            <section className={`timer-${status ? 'lightmode' : 'darkmode'} border-2 h-full flex flex-col justify-between profile-div`}>
                                 <div className='flex flex-col gap-1'>
                                     <h3>Your informations</h3>
                                     <h4>(You'll be able to add/modify them later)</h4>
                                 </div>
 
-                                <div className='flex flex-col gap-8 grow justify-center items-start'>
-                                    <div className='flex justify-center w-full'>
+                                <div className='flex flex-col gap-8 grow justify-center items-center'>
+                                    <div className='flex justify-center w-1/2'>
                                         <Image
                                             src={session.user?.image || '/img/login.png'}
                                             alt={session.user?.name || ''}
