@@ -12,7 +12,7 @@ const UserInterface: React.FC = () => {
     const { data: session } = useSession();
 
     return (
-        <nav className="flex">
+        <nav className="flex h-full">
 
             {session?.user ? (
                 <div className='flex flex-col items-center pt-4 pr-2'>
@@ -36,10 +36,10 @@ const UserInterface: React.FC = () => {
                     </button>
                 </div>
             ) : (
-                <div className='flex items-center'>
+                <div className='flex items-center justify-center h-full scale-110'>
                     <Link
                         href="/login"
-                        className='mr-4 pt-1 pb-1 pl-4 pr-4 hover:scale-110 text-l border-2 border-black text-center rounded-full text-black bg-white loginbutton login-big shadow-xl'
+                        className='h-10 mr-4 pt-1 pb-1 pl-4 pr-4 hover:scale-110 text-l border-2 border-black text-center rounded-full text-black bg-white loginbutton login-big shadow-xl items-center justify-center'
                         prefetch={false}
                     >
                         Login
