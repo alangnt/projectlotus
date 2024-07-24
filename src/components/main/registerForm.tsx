@@ -64,7 +64,7 @@ const RegisterForm: React.FC = () => {
                         <h1 className='text-3xl text-center'>Welcome ! Register your account below</h1>
                         <form onSubmit={handleSubmit} className='flex flex-col justify-evenly grow text-xl form-width'>
                             <div className='flex flex-col gap-2'>
-                                <label htmlFor="name">Name:</label>
+                                <label htmlFor="name">Username:</label>
                                 <input
                                     type="text"
                                     id="name"
