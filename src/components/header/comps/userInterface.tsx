@@ -5,6 +5,7 @@ import { useStatus } from "../../../context/context";
 
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const UserInterface: React.FC = () => {
 
@@ -38,10 +39,18 @@ const UserInterface: React.FC = () => {
                 <div className='flex items-center'>
                     <Link
                         href="/login"
-                        className='mr-4 pt-1 pb-1 pl-4 pr-4 hover:scale-110 text-l border-2 border-black text-center rounded-full text-black bg-white loginbutton shadow-xl'
+                        className='mr-4 pt-1 pb-1 pl-4 pr-4 hover:scale-110 text-l border-2 border-black text-center rounded-full text-black bg-white loginbutton login-big shadow-xl'
                         prefetch={false}
                     >
                         Login
+                    </Link>
+
+                    <Link
+                        href="/login"
+                        className='hover:scale-110 text-black loginbutton login-small shadow-xl'
+                        prefetch={false}
+                    >
+                        <Image src="/img/user.png" alt="Login" width={75} height={75} />
                     </Link>
                 </div>
             )}

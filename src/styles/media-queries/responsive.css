@@ -117,6 +117,14 @@
 }
 
 @media screen and (min-width: 547px) {
+  .login-big {
+    @apply flex;
+  }
+
+  .login-small {
+    @apply hidden;
+  }
+
   .change-flex:hover .lightmode {
     @apply rounded-br-none rounded-tr-none border-none scale-95;
   }
@@ -144,6 +152,14 @@
 }
 
 @media screen and (max-width: 546px) {
+  .login-big {
+    @apply hidden;
+  }
+
+  .login-small {
+    @apply flex;
+  }
+
   .change-flex:hover .lightmode {
     @apply rounded-br-none rounded-bl-none border-none scale-95;
   }
