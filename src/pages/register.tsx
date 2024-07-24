@@ -1,8 +1,12 @@
+"use client"
+
 import Head from 'next/head';
 import BackgroundVideo from '../components/BackgroundVideo';
-import HeaderConnect from "../components/header/headerConnect";
+import HeaderRegLog from "../components/header/headerRegLog";
 import RegisterForm from "../components/main/registerForm";
 import Footer from '../components/footer/footer';
+
+import React, { useState } from "react"
 
 const Connect: React.FC = () => {
     return (
@@ -20,7 +24,7 @@ const Connect: React.FC = () => {
 
             <BackgroundVideo />
 
-            <HeaderConnect />
+            <HeaderRegLog />
 
             <RegisterForm />
 

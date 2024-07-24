@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import BackgroundVideo from '../components/BackgroundVideo';
-import HeaderConnect from "../components/header/headerConnect";
+import HeaderRegLog from "../components/header/headerRegLog";
 import LoginForm from "../components/main/loginForm";
 import Footer from '../components/footer/footer';
 
@@ -20,7 +20,7 @@ const Connect: React.FC = () => {
 
             <BackgroundVideo />
 
-            <HeaderConnect />
+            <HeaderRegLog />
 
             <LoginForm />
 

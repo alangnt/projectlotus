@@ -3,22 +3,28 @@
 import React from 'react';
 import { useStatus } from "../../../context/context";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 const UserInterface: React.FC = () => {
-    const { status } = useStatus();
 
     const { data: session } = useSession();
 
     return (
         <nav className="flex">
 
-            {session ? (
+            {session?.user ? (
                 <div className='flex flex-col items-center pt-4 pr-2'>
-                    <img src={session.user?.image as string} alt={session.user?.name as string} className='rounded-full big-mobile'></img>
+                    <Link
+                        href='/profile'
+                        prefetch={false}
+                        className='flex justify-center items-center'
+                    >
+                        <img src={session.user.image || '/img/login.png'} alt={session.user.name || ''} className='rounded-full big-mobile'></img>
+                    </Link>
 
                     <p className='hide-mobile'>
-                        Enjoy your session, {session.user?.name}!
+                        Enjoy your session !
                     </p>
 
                     <button
@@ -30,36 +36,13 @@ const UserInterface: React.FC = () => {
                 </div>
             ) : (
                 <div className='flex items-center'>
-                    {status ? (
-                        <>
-                            <button
-                                onClick={() => signIn("google")}
-                            >
-                                <img src='/img/logos/ggsignin.png' alt='Google Sign In button' className='big'></img>
-                            </button>
-
-                            <button
-                                onClick={() => signIn("google")}
-                            >
-                                <img src='/img/logos/ggsigninicon.png' alt='Google Sign In button' className='small'></img>
-                            </button>
-                        </>
-                    ) : (
-                        <>
-                            <button
-                                onClick={() => signIn("google")}
-                            >
-                                <img src='/img/logos/ggsignin.png' alt='Google Sign In button' className='big'></img>
-
-                            </button>
-
-                            <button
-                                onClick={() => signIn("google")}
-                            >
-                                <img src='/img/logos/ggsigninicon.png' alt='Google Sign In button' className='small'></img>
-                            </button>
-                        </>
-                    )}
+                    <Link
+                        href="/login"
+                        className='mr-4 pt-1 pb-1 pl-4 pr-4 hover:scale-110 text-l border-2 border-black text-center rounded-full text-black bg-white loginbutton shadow-xl'
+                        prefetch={false}
+                    >
+                        Login
+                    </Link>
                 </div>
             )}
 

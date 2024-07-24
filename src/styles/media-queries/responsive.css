@@ -116,7 +116,12 @@
   }
 
   .form-width {
-    @apply w-80;
+    width: 20vw;
+    font-size: 1.5vw;
+  }
+
+  .register-height {
+    width: 30vw;
   }
 }
 
@@ -154,7 +159,12 @@
   }
 
   .form-width {
-    @apply w-3/4;
+    width: 40vw;
+    font-size: 4vw;
+  }
+
+  .register-height {
+    width: 60vw;
   }
 }
 
@@ -191,18 +201,6 @@
 @media screen and (max-height: 967px) {
   .register-height {
     height: 40rem;
-  }
-}
-
-@media screen and (min-height: 733px) {
-  .login-height {
-    @apply h-3/5;
-  }
-}
-
-@media screen and (max-height: 732px) {
-  .login-height {
-    height: 30rem;
   }
 }
 

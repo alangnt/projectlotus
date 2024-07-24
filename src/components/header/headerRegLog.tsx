@@ -3,19 +3,15 @@ import UserInterface from "./comps/userInterface";
 
 import Link from "next/link";
 
-export default function HeaderConnect() {
+export default function HeaderRegLog() {
     return (
-        <header className="flex justify-between items-center w-full h-2/10">
+        <header className="flex justify-between items-center w-full h-2/10 pr-4 pl-2">
             <div className="header-parts">
                 <LDModes />
             </div>
 
-            <div className="text-center grow">
+            <div className="text-center">
                 <Link href="/" className="text-2xl hover:scale-110 transition-all">Home</Link>
-            </div>
-
-            <div className="header-parts h-full flex justify-end">
-                <UserInterface />
             </div>
         </header>
     )
